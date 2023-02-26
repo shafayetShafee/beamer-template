@@ -1,0 +1,43 @@
+---
+title: "Presentation Title"
+date: 'May 29, 2022'
+output: 
+  beamer_presentation:
+    includes:
+      in_header: header_presentation.tex
+    citation_package: natbib
+    slide_level: 2
+    theme: "CambridgeUS"
+    colortheme: "seagull"
+    fonttheme: "serif"
+make149: TRUE
+fontsize: 10pt
+bibliography: refer.bib
+biblio-style: apalike
+# citecolor: CornflowerBlue
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F, fig.align = 'center')
+```
+
+## Outline
+
+\tableofcontents
+
+# Section title
+
+## subsection title
+
+- Bullet Point 01
+
+- Bullet Point 02
+
+--- 
+
+Usual text used in slide with no frame title
+
+# References
+
+
+
