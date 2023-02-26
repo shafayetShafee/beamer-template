@@ -1,0 +1,88 @@
+---
+title: "Presentation Title"
+author: \parbox{3cm}{Eraf Hossain \\ Shafayet Khan Shafee \\ Md Niamul Islam Sium \\ \vspace{2mm}}
+format: 
+  beamer:
+    theme: metropolis
+    keep-tex: true
+include-in-header: header.tex
+date: last-modified
+date-format: "DD MMM, YYYY"
+---
+
+
+## Introduction
+
+- Noise added during analog to digital conversion is normally distributed and distorts the information signal, lowering its quality. 
+
+- To extract the original information from the signal, filters are used to reduce the attenuation level of the signal and improve its performance. 
+
+- The main contribution of the paper is designing these filters and presenting experimental results. The paper concludes with a comparison of the proposed three filters. 
+
+## Methods
+
+The paper proposed three different types of filters, which are,
+
+1. Low pass filter, 
+2. Moving average filter and 
+3. FIR filter
+    
+\settowidth{\leftmargini}{\usebeamertemplate{itemize item}}
+\addtolength{\leftmargini}{\labelsep}
+
+- The low pass filter is simple and easy to implement.
+
+- The moving average filter is also the simplest and easiest digital filter.
+
+- The \texttt{FIR} (finite Impulse Response) filter which removes higher frequency components from the signal and gives the output as the low frequency components which is the required original signal.
+
+## Low Pass Filter
+
+- A type of electronic filter that allows low-frequency signals to pass through while reducing higher frequency signals. 
+
+- Operates by blocking or reducing high-frequency signals and passing low-frequency signals, and therefore, useful for removing unwanted high-frequency noise from a signal.
+
+## Low Pass Filter
+
+- This type of filters are commonly used to process ECG signals because they help to reduce noise and improve the signal quality, making it easier to detect and analyze the heart’s electrical activity. 
+
+- While low pass filters are useful for removing high-frequency noise, they can also introduce phase distortion, delay, ringing, and signal degradation, making them unsuitable for some applications where high-frequency detail is important. 
+
+## Moving Average Filter
+
+- A type of filter used in signal processing to smooth out short-term fluctuations in a signal and preserve its long-term trends. 
+
+- It works by replacing each sample in the input signal with the average of a set of consecutive samples, effectively smoothing out high-frequency noise. 
+
+## Moving Average Filter
+
+- The number of samples used to calculate the average, also known as the **window size**, determines the amount of smoothing applied to the signal.
+
+- A larger window size results in greater smoothing and a slower response time, while a smaller window size results in less smoothing and a faster response time. 
+
+- These filters are commonly used in many applications, including signal smoothing, trend analysis, and noise reduction. 
+
+## Finite Impulse Response (FIR) Filter
+
+- A type of digital filter used in signal processing to perform filtering operations on a signal. 
+
+- Have a finite number of taps (coefficients) that determine the filter’s response. The taps represent a weighted sum of the past input samples and are used to shape the filter’s frequency response. 
+
+- Since implemented using a set of fixed coefficients, they are considered to be more stable and have a more predictable frequency response.
+
+## Finite Impulse Response (FIR) Filter
+
+- FIR filters are also easy to implement and computationally efficient, making them well suited for real-time processing applications. 
+
+- One of the main advantages of FIR filters is that they are inherently stable and have a linear phase response, making them well suited for applications where these characteristics are important. 
+
+- Additionally, FIR filters can be designed to have a more precise frequency response compared to other filters, making them useful for applications where a specific frequency response is required.
+
+## Results
+
+The simulation results reveal that the Finite Impulse Response (FIR) filter performs better by reducing the attenuation in the ECG signal compared to the low pass filter and the moving average filter, and is considered appropriate for medical health applications.
+
+## {.standout}
+
+\Huge Thank you
+
