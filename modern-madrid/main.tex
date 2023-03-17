@@ -1,0 +1,171 @@
+\documentclass[dvipsnames]{beamer}
+\usetheme{Madrid}
+\usecolortheme{default}
+\useinnertheme{circles}
+\linespread{1.1}\selectfont
+
+% beamer fonts --------------------------------------------------
+\newcommand{\smaller}{\fontsize{7}{8}\selectfont}
+
+\setbeamerfont{title}{size={\fontsize{15}{16}}}
+% \setbeamerfont{author}{size={\fontsize{14}{10}}}
+% \setbeamerfont{caption}{size=\scriptsize}
+\setbeamerfont{institute}{size={\fontsize{10}{12}}}
+\setbeamerfont{title}{series=\bfseries}
+\setbeamerfont{page number in head/foot}{size=\smaller}
+
+% beamer color -------------------------------------------------
+\definecolor{UBCgrey}{rgb}{0.3686, 0.5255, 0.6235}
+\definecolor{UBCblue}{rgb}{0.04706, 0.13725, 0.26667}
+\definecolor{mDarkBrown}{HTML}{604c38}
+\definecolor{mDarkTeal}{HTML}{23373b}
+\definecolor{mLightBrown}{HTML}{EB811B}
+\definecolor{mLightGreen}{HTML}{14B03D}
+
+\setbeamercolor{palette primary}{bg=UBCblue,fg=white}
+\setbeamercolor{palette secondary}{bg=UBCblue,fg=white}
+\setbeamercolor{palette tertiary}{bg=UBCblue,fg=white}
+\setbeamercolor{palette quaternary}{bg=UBCblue,fg=white}
+\setbeamercolor{structure}{fg=UBCblue}
+\setbeamercolor{section in toc}{fg=UBCblue}
+\setbeamercolor{titlelike}{bg=UBCblue, fg=white}
+\setbeamercolor{section title}{fg=mLightGreen}
+\setbeamercolor{page number in head/foot}{fg=UBCgrey}
+\setbeamercolor{alerted text}{fg=mLightGreen}
+\setbeamercolor{block title}{bg=UBCblue, fg=white}
+\setbeamercolor{block title example}{bg=UBCblue, fg=white}
+\setbeamercolor{block title alert}{bg=UBCblue, fg=white}
+
+% beamer template ----------------------------------------------
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{section page}
+{   
+    \begin{centering}
+    \vspace{3em}
+    \usebeamerfont{section title}\huge\insertsection\par
+    \end{centering}
+}
+
+% beamer settings -----------------------------------------------
+\newcommand{\mysectionpage}{
+\begingroup
+\setbeamercolor{background canvas}{bg=UBCblue}
+\begin{frame}[plain,noframenumbering]
+\sectionpage
+\end{frame}
+\endgroup
+}
+
+\newcommand{\thankSlide}{
+\begingroup
+\setbeamercolor{background canvas}{bg=UBCblue}
+\begin{frame}[plain,noframenumbering]
+    \centering
+    \vspace{4em}
+    {\huge\bfseries {\color{mLightGreen} Thank You!}}
+\end{frame}
+\endgroup
+}
+
+% usepackages ---------------------------------------------------
+\usepackage{hyperref}
+\usepackage{dirtytalk}
+\usepackage{amsmath}
+\usepackage{tabularray}
+
+\hypersetup{colorlinks=true,linkcolor=mLightBrown,anchorcolor=black,citecolor=NavyBlue,urlcolor=NavyBlue}
+
+% biblio --------------------------------------------------------
+
+% if you want to use natbib
+% \usepackage[square,numbers,sort&compress]{natbib}
+% \setcitestyle{numbers}
+% \setcitestyle{citesep={,}}
+
+% biblatex -----------------------------------
+
+\usepackage[backend=biber,bibstyle=nature,citestyle=authoryear-comp,sortcites,sorting=none,natbib,hyperref]{biblatex}
+\addbibresource{biblio.bib}
+
+% title info -------------------------------------------------
+
+\title[Presentation]
+{A Modern Madrid Theme Inspired by Metropolis Beamer Theme}
+
+
+\author[]
+{
+   {\Large Author Name\inst{1}} \\ 
+   \vspace{2mm} ID or ROLL No
+}
+
+\institute[]
+{
+  \inst{1}%
+  Institute of Something \\
+  University
+}
+
+\date[]
+{March 14, 2023}
+
+
+
+% contents -----------------------------------------------
+
+\begin{document}
+
+\frame[plain,noframenumbering]{\titlepage}
+
+\begin{frame}
+\frametitle{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+\mysectionpage
+
+\begin{frame}{Frame Title 01}
+
+\begin{itemize}
+    \setlength\itemsep{1em}
+    \item Item 1
+    \item Item 2
+\end{itemize}
+
+\end{frame}
+
+\section{More}
+\mysectionpage
+
+\begin{frame}{Frame Title 02}
+
+It is an \alert{especially highlighted text}. You can cite like \citep{snijders1999introduction}
+
+\begin{example}
+example
+\end{example}
+
+\begin{block}{}
+\linespread{1.2}\selectfont
+It is a block
+\end{block}
+
+
+\begin{block}{Header}
+\linespread{1.2}\selectfont
+It is a block with header
+\end{block}
+    
+\end{frame}
+
+\section*{}
+\begin{frame}[allowframebreaks]{References}
+\printbibliography
+\end{frame}
+
+\thankSlide
+
+\end{document}
